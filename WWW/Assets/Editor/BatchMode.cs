@@ -9,10 +9,7 @@ public class BatchMode{
  static List<string> levels = new List<string>();
  
     public static void BuildAndroid()
-    {
-        PlayerSettings.companyName = "cm";
-        PlayerSettings.productName = "WWW";
-        PlayerSettings.applicationIdentifier= "com.cm.WWW";
+    {       
         foreach (EditorBuildSettingsScene item in EditorBuildSettings.scenes)
         {
             if (!item.enabled)
@@ -21,7 +18,10 @@ public class BatchMode{
             }
             levels.Add(item.path);
         }
-        EditorUserBuildSettings.SwitchActiveBuildTarget(BuildTarget.Android);
+        EditorUserBuildSettings.SwitchActiveBuildTarget(BuildTargetGroup.Android, BuildTarget.Android);
+        PlayerSettings.companyName = "cm";
+        PlayerSettings.productName = "WWW";
+        PlayerSettings.applicationIdentifier = "com.cm.WWW";
         string res = BuildPipeline.BuildPlayer(levels.ToArray(), "WWW.apk", BuildTarget.Android, BuildOptions.None);
         if (res.Length>0)
         {
