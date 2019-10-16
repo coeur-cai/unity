@@ -10,6 +10,9 @@ public class BatchMode{
  
     public static void BuildAndroid()
     {
+        PlayerSettings.companyName = "cm";
+        PlayerSettings.productName = "WWW";
+        PlayerSettings.applicationIdentifier= "com.cm.WWW";
         foreach (EditorBuildSettingsScene item in EditorBuildSettings.scenes)
         {
             if (!item.enabled)
