@@ -19,9 +19,9 @@ public class BatchMode{
             levels.Add(item.path);
         }
         EditorUserBuildSettings.SwitchActiveBuildTarget(BuildTargetGroup.Android, BuildTarget.Android);
-        PlayerSettings.companyName = "cm";
-        PlayerSettings.productName = "WWW";
-        PlayerSettings.applicationIdentifier = "com.cm.WWW";
+        //PlayerSettings.companyName = "cm";
+        //PlayerSettings.productName = "WWW";
+       // PlayerSettings.applicationIdentifier = "com.cm.WWW";
         string res = BuildPipeline.BuildPlayer(levels.ToArray(), "WWW.apk", BuildTarget.Android, BuildOptions.None);
         if (res.Length>0)
         {
