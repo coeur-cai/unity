@@ -18,7 +18,7 @@ public class BatchMode{
             }
             levels.Add(item.path);
         }
-        EditorUserBuildSettings.SwitchActiveBuildTarget(BuildTargetGroup.Android, BuildTarget.Android);
+        EditorUserBuildSettings.SwitchActiveBuildTarget(BuildTarget.Android);
         //PlayerSettings.companyName = "cm";
         //PlayerSettings.productName = "WWW";
        // PlayerSettings.applicationIdentifier = "com.cm.WWW";
