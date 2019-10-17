@@ -8,7 +8,7 @@ using UnityEditor;
 public class BatchMode{
  static List<string> levels = new List<string>();
  
-    public static void BuildAndroid()
+    public static void UnityBuildAndroid()
     {       
         foreach (EditorBuildSettingsScene item in EditorBuildSettings.scenes)
         {
@@ -18,7 +18,7 @@ public class BatchMode{
             }
             levels.Add(item.path);
         }
-        EditorUserBuildSettings.SwitchActiveBuildTarget(BuildTarget.Android);
+        EditorUserBuildSettings.SwitchActiveBuildTarget(BuildTargetGroup.Android,BuildTarget.Android);
         //PlayerSettings.companyName = "cm";
         //PlayerSettings.productName = "WWW";
        // PlayerSettings.applicationIdentifier = "com.cm.WWW";
